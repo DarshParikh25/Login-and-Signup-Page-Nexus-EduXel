@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Genos', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("assests/images/background-image.jpg") center/cover no-repeat;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70vh;
+    width: 70vw;
+    border-radius: 50px;
+    box-shadow: 0 0 100px 50px #000;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    position: relative;
+    top: -30px;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+hr{
+    width: 10vw;
+    height: 2px;
+    background-color: #000;
+    margin-bottom: 15px;
+    border: none;
+}
+
+form{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form input{
+    width: 15vw;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 5px;
+    font-size: large;
+}
+
+form p{
+    color: #2d2169;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form a{
+    color: #2d2169;
+}
+
+button{
+    background-color: #2d2169;
+    color: #fff;
+    border: none;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 17.6vw;
+    font-size: larger;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #231467;
+}
+
+.icons a img{
+    margin: 15px 10px;
+}
+
+span{
+    margin-bottom: 10px;
+    font-size: x-large;
+}
+
+#box{
+    width: 35vw;
+    height: 70vh;
+    position: absolute;
+    background-color: #2d2169;
+    border-radius: 0 50px 50px 0;
+    left: 50vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+#box.move-left{
+    transform: translateX(-35vw);
+    border-radius: 50px 0 0 50px;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 820px) and (min-height: 1366px){
+    .container{
+        width: 60vw;
+        height: 80vh;
+    }
+    .sign-up{
+        position: relative;
+        top: -55px;
+        width: 60vw;
+        height: 80vh;
+    }
+    .log-in{
+        display: none;
+        position: relative;
+        top: -45px;
+        width: 60vw;
+    }
+    h1{
+        font-size: 7.5rem;
+    }
+    .icons a img{
+        height: 50px;
+        width: 50px;
+    }
+    hr{
+        width: 25vw;
+        margin: 20px 0;
+    }
+    form{
+        line-height: 50px;
+        height: 35vh;
+    }
+    form span{
+        font-size: xxx-large;
+    }
+    ::placeholder,
+    button{
+        font-size: xx-large;
+    }
+    form label,
+    button{
+        margin-top: 15px;
+    }
+    form input{
+        width: 30vw;
+        padding: 25px 50px;
+        border-radius: 15px;
+    }
+    button{
+        width: 40vw;
+        padding: 20px 0;
+        border-radius: 15px;
+    }
+    form p,
+    form a{
+        font-size: xx-large;
+        width: 60%;
+        text-align: center;
+        margin-top: 15px;
+    }
+    #box{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 820px) and (min-width: 500px){
+    body > :first-child{
+        width: 60vw;
+        height: 90vh;
+    }
+    .sign-up{
+        position: relative;
+        top: -55px;
+        width: 60vw;
+    }
+    .container{
+        transition: transform 0.8s ease-in-out;
+    }
+    .container.flipped{
+        transform: rotateY(180deg);
+    }
+    .log-in{
+        display: none;
+        position: relative;
+        top: -45px;
+        width: 60vw;
+    }
+    form input,
+    button{
+        width: 30vw;
+    }
+    #box{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 400px){
+    body > :first-child{
+        width: 75vw;
+        height: 80vh;
+    }
+    .sign-up{
+        position: relative;
+        top: -55px;
+        width: 75vw;
+    }
+    .log-in{
+        display: none;
+        position: relative;
+        top: -45px;
+        width: 75vw;
+    }
+    form input,
+    button{
+        width: 30vw;
+    }
+    #box{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 340px){
+    body > :first-child{
+        width: 90vw;
+        height: 80vh;
+    }
+    .sign-up{
+        position: relative;
+        top: -55px;
+        width: 90vw;
+    }
+    .log-in{
+        display: none;
+        position: relative;
+        top: -45px;
+        width: 90vw;
+    }
+    form input,
+    button{
+        width: 30vw;
+    }
+    #box{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 340px){
+    body > :first-child{
+        width: 90vw;
+        height: 80vh;
+    }
+    .sign-up{
+        position: relative;
+        top: -60px;
+        width: 90vw;
+    }
+    .log-in{
+        display: none;
+        position: relative;
+        top: -45px;
+        width: 90vw;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .icons a img{
+        height: 20px;
+        width: 20px;
+    }
+    hr{
+        width: 40vw;
+    }
+    form input{
+        width: 50vw;
+    }
+    button{
+        width: 60vw;
+    }
+    form p,
+    form a{
+        width: 70%;
+        text-align: center;
+    }
+    #box{
+        display: none;
+    }
+}
